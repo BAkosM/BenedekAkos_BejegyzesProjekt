@@ -39,6 +39,6 @@ public class Bejegyzes{
     }
     @Override
     public String toString() {
-        return String.format("%s - %d - "+letrejott+"\nSzerkesztve: "+szerkesztve+"\n%S",szerzo,likeok,tartalom);
+        return String.format("%s - %d - "+letrejott+"\nSzerkesztve: "+szerkesztve+"\n%S\n",szerzo,likeok,tartalom);
     }
 }

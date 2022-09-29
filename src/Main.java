@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
-import java.time.LocalDateTime;
 
 import bejegyzes.Bejegyzes;
 
@@ -67,12 +66,22 @@ public class Main {
         //Feladat 3
         int hanyadik = 0;
         int likokszama = 0;
+        int tzotalat = 0;
         for (int i=0;i<bejegyzesek.size();i++){
             if(bejegyzesek.get(i).getLikeok()>likokszama){
                 likokszama = bejegyzesek.get(i).getLikeok();
                 hanyadik = i;
             }
+            if(bejegyzesek.get(i).getLikeok()<15){
+                tzotalat += 1;
+            }
         }
-        System.out.println("A legtöbb likal rendelkező poszt: "+bejegyzesek.get(hanyadik));
+        System.out.printf("A legtöbb lájkal rendelkező poszt a %d-adik ",hanyadik);
+        if(likokszama>35){
+            System.out.println("Van 35 lájknál több lájkal rendelkező bejegyzés");
+        }else{
+            System.out.println("Nincs 35 lájknál több lájkal rendelkező bejegyzés");
+        }
+        System.out.printf("%d bejegyzés van ami kevessebb mint 15 lájkot kapott",tzotalat);
     }
 }        
