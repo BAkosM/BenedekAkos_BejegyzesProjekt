@@ -6,8 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
+import java.time.LocalDateTime;
 
-import bejegyzes.*;
+import bejegyzes.Bejegyzes;
 
 public class Main {        
     public static List<Bejegyzes> bejegyzesek = new ArrayList<>();
@@ -44,9 +45,9 @@ public class Main {
         if (db%1==0){
             for(int i=0; i<db; i++){
                 System.out.print("Bejegyzes szerzője: ");
-                szerzo = sr.next();
+                szerzo = sr.nextLine();
                 System.out.print("Bejegyzes tartalma: ");
-                tartalom = sr.next();
+                tartalom = sr.nextLine();
                 Bejegyzes bejegyzes  = new Bejegyzes(szerzo,tartalom);
                 bejegyzesek.add(bejegyzes);
             }
@@ -60,8 +61,18 @@ public class Main {
             bejegyzesek.get(rnd.nextInt(bejegyzesek.size()-1)).like();
         }
         System.out.println("Mire módosítaná a második szöveget");
-        tartalom = sr.next();
+        tartalom = sr.nextLine();
         bejegyzesek.get(1).setTartalom(tartalom);
         System.out.println(bejegyzesek);
+        //Feladat 3
+        int hanyadik = 0;
+        int likokszama = 0;
+        for (int i=0;i<bejegyzesek.size();i++){
+            if(bejegyzesek.get(i).getLikeok()>likokszama){
+                likokszama = bejegyzesek.get(i).getLikeok();
+                hanyadik = i;
+            }
+        }
+        System.out.println("A legtöbb likal rendelkező poszt: "+bejegyzesek.get(hanyadik));
     }
 }        

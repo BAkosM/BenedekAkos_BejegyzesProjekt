@@ -1,4 +1,6 @@
 package bejegyzes;
+import java.time.LocalDateTime;
+
 public class Bejegyzes{
     private String szerzo;
     private String tartalom;
@@ -10,26 +12,26 @@ public class Bejegyzes{
         this.szerzo = szerzo;
         this.tartalom = tartalom;
         this.likeok = 0;
-        this.letrejott = new LocalDateTime();
-        this.szerkesztve = new LocalDateTime();
+        this.letrejott = LocalDateTime.now();
+        this.szerkesztve = LocalDateTime.now();
     }
     public String getSzerzo(){
         return szerzo;
     }
-    public int getTartalom(){
+    public String getTartalom(){
         return tartalom;
     }
     public void setTartalom(String tartalom) {
         this.tartalom = tartalom;
-        this.szerkesztve = new LocalDateTime();
+        this.szerkesztve = LocalDateTime.now();
     }
     public int getLikeok(){
         return likeok;
     }
-    public int getLetrejott(){
+    public LocalDateTime getLetrejott(){
         return letrejott;
     }
-    public int getSzerkesztve(){
+    public LocalDateTime getSzerkesztve(){
         return szerkesztve;
     }
     public void like(){
