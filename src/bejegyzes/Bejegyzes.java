@@ -37,6 +37,13 @@ public class Bejegyzes{
     public void like(){
         this.likeok = (this.getLikeok()+1);
     }
+    /*public void setListaelem(Bejegyzes listaelem){
+        this.szerzo = listaelem.getSzerzo();
+        this.tartalom = listaelem.getTartalom();
+        this.likeok = listaelem.getLikeok();
+        this.letrejott = listaelem.getLetrejott();
+        this.szerkesztve = listaelem.getSzerkesztve();
+    }*/
     @Override
     public String toString() {
         return String.format("%s - %d - "+letrejott+"\nSzerkesztve: "+szerkesztve+"\n%S\n",szerzo,likeok,tartalom);

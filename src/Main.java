@@ -83,6 +83,23 @@ public class Main {
             System.out.println("Nincs 35 lájknál több lájkal rendelkező bejegyzés!");
         }
         System.out.printf("%d bejegyzés van ami kevessebb mint 15 lájkot kapott",tzotalat);
+        /*boolean sort= false;
+        int sortszam = 0;
+        while(!sort){
+            sortszam = 0;
+            for(int i=1;i<bejegyzesek.size();i++){
+                Bejegyzes bejegyzes1  = bejegyzesek.get(i-1);
+                Bejegyzes bejegyzes2  = bejegyzesek.get(i);
+                if(bejegyzes1.getLikeok()<bejegyzes2.getLikeok()){
+                    bejegyzesek.get(i-1).setListaelem(bejegyzes1);
+                    bejegyzesek.get(i).setListaelem(bejegyzes2);;
+                    sortszam++;
+                }
+            }
+            if(sortszam == 0){
+                sort=true;
+            }
+        }*/
         System.out.println(bejegyzesek);
     }
 }        
