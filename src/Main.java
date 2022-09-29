@@ -54,5 +54,10 @@ public class Main {
             System.out.println("Nem megfelelő számot adot meg!");
         }
         beker();
+        Random rnd = new Random();
+        int likekioszt = (bejegyzesek.size()*20);
+        for(int i=0;i<likekioszt;i++){
+            bejegyzesek.get(rnd.nextInt(bejegyzesek.size()-1)).like();
+        }
     }
 }        
