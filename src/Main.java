@@ -59,5 +59,9 @@ public class Main {
         for(int i=0;i<likekioszt;i++){
             bejegyzesek.get(rnd.nextInt(bejegyzesek.size()-1)).like();
         }
+        System.out.println("Mire módosítaná a második szöveget");
+        tartalom = sr.next();
+        bejegyzesek.get(1).setTartalom(tartalom);
+        System.out.println(bejegyzesek);
     }
 }        
