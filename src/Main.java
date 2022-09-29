@@ -76,12 +76,13 @@ public class Main {
                 tzotalat += 1;
             }
         }
-        System.out.printf("A legtöbb lájkal rendelkező poszt a %d-adik ",hanyadik);
+        System.out.printf("A legtöbb lájkal rendelkező poszt a %d-adik! ",hanyadik);
         if(likokszama>35){
-            System.out.println("Van 35 lájknál több lájkal rendelkező bejegyzés");
+            System.out.println("Van 35 lájknál több lájkal rendelkező bejegyzés!");
         }else{
-            System.out.println("Nincs 35 lájknál több lájkal rendelkező bejegyzés");
+            System.out.println("Nincs 35 lájknál több lájkal rendelkező bejegyzés!");
         }
         System.out.printf("%d bejegyzés van ami kevessebb mint 15 lájkot kapott",tzotalat);
+        System.out.println(bejegyzesek);
     }
 }        
